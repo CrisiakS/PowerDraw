@@ -3,12 +3,10 @@
 #include <GL/freeglut.h>
 
 float retrowave=0;
-
+float showmethatbeauty=2;
 
         void mainmenu()
         {
-            stworz_napis("PowerDRAW!",240,130,GLUT_BITMAP_8_BY_13,1,1,0);
-            stworz_napis("Menu Glowne",235,160,GLUT_BITMAP_8_BY_13,1,1,0);
 
             glColor3f(1,1,0);
                 glBegin(GL_LINES);
@@ -49,6 +47,19 @@ float retrowave=0;
                 glColor4f(1,1,0,0);
                         glVertex3f(i*200-2500,-1000,-1);
                     glEnd();
+            }
+
+            if(showmethatbeauty>=0)
+            {
+                glColor4f(0,0,0,showmethatbeauty-0.001);
+                    glBegin(GL_POLYGON);
+                        glVertex3d(-1000,-1000,1);
+                        glVertex3d(1000,-1000,1);
+                        glVertex3d(1000,1000,1);
+                        glVertex3d(-1000,1000,1);
+                    glEnd();
+                stworz_napis("Menu Glowne",1,1,GLUT_BITMAP_8_BY_13,1,1,0);
+                showmethatbeauty-=0.01;
             }
 
             if(retrowave!=1)

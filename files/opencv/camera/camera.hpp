@@ -27,6 +27,7 @@
                     int getX();
                     int getY();
                     void drawAt(int x, int y,int r,int g,int b,int pointsize);
+                    void eraseAt(int x,int y,int pointsize);
                     camera();
             };
     }

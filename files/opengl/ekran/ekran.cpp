@@ -17,9 +17,6 @@
 using namespace std;
 using namespace cv;
 
-extern int VideoMode;
-////////////////////////////////////////////
-
 int program=0;      // Zmienna okreslajaca na jakim kroku jest program
 Video::camera kamera1;
 Video::camera kamera2;
@@ -48,35 +45,33 @@ void wait(int seconds)
                         glClearColor(0,0,0,0);
                     //////////////////////////////////////////////////////
 
+                    if(program==0)
+                        {
+                             mainmenu();
+                        }
+                    if(program==1)
+                    {
                         kamera1.Capture(cap1,0);
-                        imshow("Dupa",kamera1.GetCapturedFrame());
                         GLFrame=kamera1.GetFinalFrame();
 
                         kamera1.LiczXY();
                         cout<<kamera1.getX()<<"\t"<<kamera1.getY()<<endl;
                         kamera1.drawAt(kamera1.getX(),kamera1.getY(),1,1,1,10);
 
-                     //   GLFrame=kamera1.GetFinalFrame();
-
-                    ///////////////////////////////////////////////////////
-
-
-                   //         if(VideoMode==1)
-                          //      {
-                 //               stworz_napis("Teraz Rysujesz",5,31,GLUT_BITMAP_9_BY_15,0,1,0);
-                    //            Video::CaptureIDLE();
-
-                    //            drawing::DrawAt(punkt.x,punkt.y,255,255,255,10);
-
                             glRasterPos3f(-673,1230,10);
 
+                            Mat temp;
+                            flip(kamera1.GetCapturedFrame(),temp,0);
+                            cvtColor(temp,temp,CV_BGR2RGB);
+
+                            if(!kamera1.GetCapturedFrame().empty())
+                            glDrawPixels( temp.size().width, temp.size().height, GL_RGB, GL_UNSIGNED_BYTE, temp.ptr() );  // Rysowanie kamery
                             if(!GLFrame.empty())
                             glDrawPixels( GLFrame.size().width, GLFrame.size().height, GL_RGBA, GL_UNSIGNED_BYTE, GLFrame.ptr() );  // Rysowanie kamery
-                             //   }
-                      //  if(program==0)
-                      //      {
-                                mainmenu();
-                        //    }
+
+                    }
+
+
                     ///////////////////////////////////////////////////////
                     glFlush();
                     glutSwapBuffers();
