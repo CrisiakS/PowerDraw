@@ -19,25 +19,6 @@ extern VideoCapture cap(0);
     namespace Video                     // Przestrzeń nazw "Video" - w tej przestrzeni nazw znajduja sie funkcje odpowiadajace
         {                               // za obsluge biblioteki OpenCV
 
-
-            /////////--- Funkcja CaptureStart ---////////////
-            //Funkcja ta inicjuje kamerke internetowa oznaczana jako cap(0) gdzie
-            //'0' to numer kamerki. Zero oznacza kamerke ustawioną jako kaemra domyslna
-            int CaptureStart()
-                {
-                    VideoCapture cap(0);
-                    if(cap.isOpened())
-                        {
-                            DebugMessage("Zainicjowano przechwytywanie wideo");
-                            return true;
-                        }
-                    else
-                        {
-                            DebugMessage("Blad przy inicjalizacji przechwytywania wideo");
-                            return false;
-                        }
-                }
-
             void LiczXY()
                 {
                       Moments oMoments = moments(parametry.MainFrame);
@@ -71,7 +52,7 @@ extern VideoCapture cap(0);
                             cvtColor(TextureFrame, TextureFrame, CV_BGR2HSV);
 
                             parametry.GetFrame(TextureFrame);
-                            parametry.SaveChangesHSV();
+                            parametry.GoHSV();
 
                             LiczXY();
 

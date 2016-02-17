@@ -44,12 +44,12 @@ float retrowave=0;
             }
 
             if(retrowave!=1)
-            {
-                retrowave+=0.1;
-            }
+                {
+                    retrowave+=0.1;
+                }
             if(retrowave>=0.9)
-            {
-                retrowave=0;
-            }
+                {
+                    retrowave=0;
+                }
 
         }

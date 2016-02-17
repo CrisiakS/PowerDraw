@@ -19,7 +19,6 @@
                     int CzyRuch();
                     int SetXY(int ix, int iy);
                     int Usun();
-                    ~Point();
             };
 
     }

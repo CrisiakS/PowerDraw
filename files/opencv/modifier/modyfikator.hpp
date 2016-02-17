@@ -25,7 +25,6 @@
                         Modyfikator();
                             void GetFrame(Mat &OriginalFrame);
                             void GoHSV();
-                            void SaveChangesHSV();
                             void ExportFrame(Mat &OriginalFrame);
                             void Show();
                         Mat MainFrame;

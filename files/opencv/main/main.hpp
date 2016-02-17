@@ -6,7 +6,6 @@ using namespace cv;
 
     namespace Video
         {
-            int CaptureStart();
             void CaptureIDLE();
             void GotoHSV();
             void GotoRGB();

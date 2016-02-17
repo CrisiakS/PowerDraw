@@ -12,7 +12,7 @@
 /////////////////////////////////////////
 
 #include "../../engine/mainmenu/mainmenu.hpp"
-
+#include "../../opencv/camera/camera.hpp"
 ////////////////////////////////////////
 using namespace std;
 
@@ -27,11 +27,13 @@ bool once=false;
 
 extern Video::Point punkt;
 extern Mat ReadyMask;
+VideoCapture cap1(0);
+VideoCapture cap2(1);
 ////////////////////////////////////////////
 
 int program=0;      // Zmienna okreslajaca na jakim kroku jest program
-
-
+Video::camera kamera1;
+Video::camera kamera2;
 ////////////////////////////////////////////
 /*
 void wait(int seconds)
@@ -51,38 +53,26 @@ void wait(int seconds)
                         glClearColor(0,0,0,0);
                     //////////////////////////////////////////////////////
 
-
-
-
-
-
-
-
-
+                        kamera1.Capture(cap1);
+                        imshow("Dupa",kamera1.GetCapturedFrame());
+                        frame=kamera1.GetFinalFrame();
 
 
                     ///////////////////////////////////////////////////////
-
-                        Video::CaptureIDLE();
-
-                                drawing::DrawAt(punkt.x,punkt.y,255,255,255,10);
-
-                            glRasterPos3f(-673,1230,10);
-                            flip(frame,frame,0);
-
-                            glDrawPixels( frame.size().width, frame.size().height, GL_RGBA, GL_UNSIGNED_BYTE, frame.ptr() );  // Rysowanie kamery
 
 
 
                             if(VideoMode==1)
                                 {
-                                    stworz_napis("Teraz Rysujesz",5,31,GLUT_BITMAP_9_BY_15,0,1,0);
-                                }
-                            if(VideoMode==2)
-                                {
-                                    stworz_napis("Teraz Wycierasz",5,31,GLUT_BITMAP_9_BY_15,1,0,0);
-                                }
+                 //               stworz_napis("Teraz Rysujesz",5,31,GLUT_BITMAP_9_BY_15,0,1,0);
+                    //            Video::CaptureIDLE();
 
+                    //            drawing::DrawAt(punkt.x,punkt.y,255,255,255,10);
+
+                            glRasterPos3f(-673,1230,10);
+
+                            glDrawPixels( frame.size().width, frame.size().height, GL_RGBA, GL_UNSIGNED_BYTE, frame.ptr() );  // Rysowanie kamery
+                                }
                         if(program==0)
                             {
                                 mainmenu();
@@ -90,7 +80,8 @@ void wait(int seconds)
                     ///////////////////////////////////////////////////////
                     glFlush();
                     glutSwapBuffers();
-                }
+
+        }
         }
 
 

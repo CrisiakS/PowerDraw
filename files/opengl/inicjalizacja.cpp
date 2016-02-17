@@ -21,7 +21,6 @@
                 glutInitWindowSize(640,480);
                 glutCreateWindow("PowerDraw");
                 glutDisplayFunc(display);
-           //     glutIdleFunc(display);
                 glutKeyboardFunc(keyboard);
                 glutReshapeFunc(reshape);
                 glutTimerFunc(0,timer,0);

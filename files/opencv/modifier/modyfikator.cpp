@@ -8,12 +8,6 @@
 
             void Modyfikator::GoHSV()
                 {
-                    cvtColor(MainFrame,TempFrame, CV_RGB2HSV);
-                    flip(TempFrame,MainFrame,0);
-                }
-
-            void Modyfikator::SaveChangesHSV()
-                {
                     inRange(MainFrame, Scalar(HueLow, SaturationLow, ValueLow), Scalar(HueHigh, SaturationHigh, ValueHigh), TempFrame);
                     flip(TempFrame,MainFrame,0);
                 }
