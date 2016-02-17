@@ -278,7 +278,7 @@
 
 1455377276 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\inicjalizacja.hpp
 
-1455731920 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.cpp
+1455732768 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.cpp
 	"ekran.hpp"
 	<GL/freeglut.h>
 	"../../opencv/main/main.hpp"
@@ -633,7 +633,7 @@
 1455390986 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\debug\debug.hpp
 	<string>
 
-1455731920 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\mouse and keyboard\keyboard\keyboard.cpp
+1455732777 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\mouse and keyboard\keyboard\keyboard.cpp
 	"keyboard.hpp"
 	"../../debug/debug.hpp"
 	<GL/glut.h>
@@ -682,14 +682,14 @@
 	"../biblioteki.hpp"
 	<iostream>
 
-1455731920 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\rysowanie\drawing.cpp
+1455732733 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\rysowanie\drawing.cpp
 	"drawing.hpp"
 	"../../opencv/biblioteki.hpp"
 	<vector>
 	"../../opencv/point/point.hpp"
 	<iostream>
 
-1455731920 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\rysowanie\drawing.hpp
+1455732728 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\rysowanie\drawing.hpp
 	<GL/freeglut.h>
 	<vector>
 

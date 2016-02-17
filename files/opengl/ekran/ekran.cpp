@@ -27,21 +27,17 @@ bool once=false;
 
 extern Video::Point punkt;
 extern Mat ReadyMask;
-VideoCapture cap1(0);
-VideoCapture cap2(1);
 ////////////////////////////////////////////
 
 int program=0;      // Zmienna okreslajaca na jakim kroku jest program
 Video::camera kamera1;
 Video::camera kamera2;
-<<<<<<< HEAD
 
-VideoCapture cap1(0);   // Program bedzie dzialal max na 2 kamery - tu ich deklaracje
+VideoCapture cap1;   // Program bedzie dzialal max na 2 kamery - tu ich deklaracje
 VideoCapture cap2;   // -||-
 
 Mat GLFrame;        // Ta plaszczyzna bedzie wyswietlana jako obraz kamery w OPENGL
-=======
->>>>>>> parent of 8215a5b... Uporzadkowanie pliku main
+
 ////////////////////////////////////////////
 /*
 void wait(int seconds)

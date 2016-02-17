@@ -5,8 +5,6 @@
 #include <iostream>
 using namespace std;
 
-<<<<<<< HEAD
-=======
 extern Mat frame;
 extern Video::Point punkt;
 extern int VideoMode;
@@ -75,6 +73,5 @@ Mat ReadyMask;
 
         }
 
->>>>>>> parent of 8215a5b... Uporzadkowanie pliku main
 
 
