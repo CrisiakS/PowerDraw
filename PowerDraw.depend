@@ -1,13 +1,14 @@
 # depslib dependency file v1.0
-1455404171 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\inicjalizacja.cpp
+1455717379 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\inicjalizacja.cpp
 	<GL/freeglut.h>
 	<string>
 	"inicjalizacja.hpp"
 	"ekran/ekran.hpp"
 	"../mouse and keyboard/keyboard/keyboard.hpp"
+	"reshape/reshape.hpp"
 	"../debug/debug.hpp"
 
-1455548785 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\main\main.cpp
+1455716793 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\main\main.cpp
 	"main.hpp"
 
 1455390461 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\main\main.hpp
@@ -249,7 +250,7 @@
 
 1455377276 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\inicjalizacja.hpp
 
-1455580612 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.cpp
+1455716984 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.cpp
 	"ekran.hpp"
 	<GL/freeglut.h>
 	"../../opencv/main/main.hpp"
@@ -260,6 +261,7 @@
 	<string>
 	<time.h>
 	<vector>
+	"../../engine/mainmenu/mainmenu.hpp"
 
 1455377785 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.hpp
 
@@ -661,8 +663,16 @@
 	<GL/freeglut.h>
 	<vector>
 
-1455712863 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.cpp
+1455717610 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.cpp
 	"mainmenu.hpp"
+	"../../opengl/text/tekst.hpp"
+	<GL/freeglut.h>
 
-1455712855 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.hpp
+1455713208 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.hpp
+
+1455714339 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\reshape\reshape.hpp
+
+1455715290 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\reshape\reshape.cpp
+	"reshape.hpp"
+	<GL/freeglut.h>
 

@@ -8,6 +8,12 @@
 #include <string>
 #include <time.h>
 #include <vector>
+
+/////////////////////////////////////////
+
+#include "../../engine/mainmenu/mainmenu.hpp"
+
+////////////////////////////////////////
 using namespace std;
 
 extern Mat TextureFrame;
@@ -21,40 +27,52 @@ bool once=false;
 
 extern Video::Point punkt;
 extern Mat ReadyMask;
+////////////////////////////////////////////
+
+int program=0;      // Zmienna okreslajaca na jakim kroku jest program
+
+
+////////////////////////////////////////////
+/*
 void wait(int seconds)
 {
     clock_t endwait;
     endwait = clock () + seconds * CLOCKS_PER_SEC ;
     while (clock() < endwait) {}
 }
+*/
 
     namespace OpenGL
         {
             void display()
                 {
                         glClear(GL_COLOR_BUFFER_BIT);
-
+                        glClear(GL_DEPTH_BUFFER_BIT);
                         glClearColor(0,0,0,0);
+                    //////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
                     ///////////////////////////////////////////////////////
 
                         Video::CaptureIDLE();
 
-
-
-
                                 drawing::DrawAt(punkt.x,punkt.y,255,255,255,10);
 
-                            glRasterPos2d(0,479);
+                            glRasterPos3f(-673,1230,10);
                             flip(frame,frame,0);
 
                             glDrawPixels( frame.size().width, frame.size().height, GL_RGBA, GL_UNSIGNED_BYTE, frame.ptr() );  // Rysowanie kamery
-                            if(once==false)
-                            {
-                                drawing::PrepareBackground();
-                                once=true;
-                            }
 
-                            stworz_napis("'z' by rysowac | 'x' by wycierac",5,15,GLUT_BITMAP_9_BY_15,1,1,0);
+
 
                             if(VideoMode==1)
                                 {
@@ -64,6 +82,11 @@ void wait(int seconds)
                                 {
                                     stworz_napis("Teraz Wycierasz",5,31,GLUT_BITMAP_9_BY_15,1,0,0);
                                 }
+
+                        if(program==0)
+                            {
+                                mainmenu();
+                            }
                     ///////////////////////////////////////////////////////
                     glFlush();
                     glutSwapBuffers();
