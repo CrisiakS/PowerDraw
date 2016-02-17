@@ -7,7 +7,6 @@
      namespace drawing
         {
             void DrawAt(int x,int y, int r, int g, int b, int pointsize);
-            void PrepareBackground();
             void ShowDraw();
         }
 #endif // drawing_hpp

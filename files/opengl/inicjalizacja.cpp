@@ -7,6 +7,9 @@
 #include "reshape/reshape.hpp"
 #include "../debug/debug.hpp"
 
+#include "../main/main.hpp"
+extern options obraz;
+
     namespace OpenGL
     {
         void timer( int extra )

@@ -12,15 +12,6 @@ Mat DrawingMask(480,640,CV_8UC3);
 Mat ReadyMask;
     namespace drawing
         {
-            void PrepareBackground()
-                {
-                    DrawingMask=Scalar(0,0,0);
-                    ReadyMask=DrawingMask;
-
-                }
-
-
-
             void DrawAt(int x,int y, int r, int g, int b, int pointsize)
                 {
                     if(punkt.y>5 and punkt.y<475 and punkt.x>5 and punkt.x<635 and VideoMode==1)

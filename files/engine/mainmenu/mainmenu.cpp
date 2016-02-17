@@ -4,7 +4,6 @@
 
 float retrowave=0;
 
-
         void mainmenu()
         {
             stworz_napis("PowerDRAW!",240,130,GLUT_BITMAP_8_BY_13,1,1,0);
@@ -12,7 +11,7 @@ float retrowave=0;
 
             glColor3f(1,1,0);
                 glBegin(GL_LINES);
-                    glVertex3f(-10000,1000,29.9);
+                    glVertex3f(-90000,1000,29.9);
                     glVertex3f(10000,1000,29.9);
                 glEnd();
 
@@ -26,8 +25,8 @@ float retrowave=0;
 
                 glColor3f(1,1,0);
                     glBegin(GL_LINES);
-                        glVertex3f(i*200-3000,1000,29.9);
-                        glVertex3f(i*200-3000,1000,-1);
+                        glVertex3f(i*200-2500,1000,29.9);
+                        glVertex3f(i*200-2500,1000,-1);
                     glEnd();
                 ////////////////////////////////////
                 glColor4f(1,1,0,0.02*i);
@@ -38,8 +37,8 @@ float retrowave=0;
 
                 glColor3f(1,1,0);
                     glBegin(GL_LINES);
-                        glVertex3f(i*200-3000,100,29.9);
-                        glVertex3f(i*200-3000,100,-1);
+                        glVertex3f(i*200-2500,100,29.9);
+                        glVertex3f(i*200-2500,100,-1);
                     glEnd();
             }
 
