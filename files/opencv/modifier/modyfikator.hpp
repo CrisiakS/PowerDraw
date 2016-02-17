@@ -22,7 +22,6 @@
 
                         Mat TempFrame;
                     public:
-                        Modyfikator();
                             void GetFrame(Mat &OriginalFrame);
                             void GoHSV();
                             void ExportFrame(Mat &OriginalFrame);

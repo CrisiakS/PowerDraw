@@ -4,8 +4,8 @@
 
             struct options
             {
-                int width=1024;
-                int height=768;
+                int width=640;
+                int height=480;
 
                 int angle=45;
                 int near_distanse=0;

@@ -1,6 +1,6 @@
  #include "modyfikator.hpp"
  #include "../biblioteki.hpp"
-
+ #include "../../debug/debug.hpp"
  namespace Video
         {
             void Modyfikator::GetFrame(Mat &OriginalFrame)
@@ -8,8 +8,18 @@
 
             void Modyfikator::GoHSV()
                 {
+                    if(true==false)
+                    {
+                        namedWindow("Opcje",WINDOW_AUTOSIZE);
+                                cvCreateTrackbar("Hue","Opcje",&HueLow,HueHigh);
+                                cvCreateTrackbar("Saturacja","Opcje",&SaturationLow,SaturationHigh);
+                                cvCreateTrackbar("Wartosc","Opcje",&ValueLow,ValueHigh);
+                    }
                     inRange(MainFrame, Scalar(HueLow, SaturationLow, ValueLow), Scalar(HueHigh, SaturationHigh, ValueHigh), TempFrame);
+              //    imshow("Podglad Thresold",TempFrame);
                     flip(TempFrame,MainFrame,0);
+
+
                 }
 
             void Modyfikator::ExportFrame(Mat &OriginalFrame)
@@ -22,12 +32,4 @@
                     imshow("Parametry",MainFrame);
                 }
 
-            Modyfikator::Modyfikator()
-                {
-                    namedWindow("Opcje",WINDOW_AUTOSIZE);
-
-                        cvCreateTrackbar("Hue","Opcje",&HueLow,HueHigh);
-                        cvCreateTrackbar("Saturacja","Opcje",&SaturationLow,SaturationHigh);
-                        cvCreateTrackbar("Wartosc","Opcje",&ValueLow,ValueHigh);
-                }
         }

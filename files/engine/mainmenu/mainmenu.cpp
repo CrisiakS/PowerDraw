@@ -23,9 +23,10 @@ float retrowave=0;
                         glVertex3f(10000,1000,i-retrowave);
                     glEnd();
 
-                glColor3f(1,1,0);
+                glColor4f(1,1,0,1);
                     glBegin(GL_LINES);
                         glVertex3f(i*200-2500,1000,29.9);
+                glColor4f(1,1,0,0);
                         glVertex3f(i*200-2500,1000,-1);
                     glEnd();
                 ////////////////////////////////////
@@ -35,9 +36,10 @@ float retrowave=0;
                         glVertex3f(10000,100,i-retrowave);
                     glEnd();
 
-                glColor3f(1,1,0);
+                glColor4f(1,1,0,1);
                     glBegin(GL_LINES);
                         glVertex3f(i*200-2500,100,29.9);
+                glColor4f(1,1,0,0);
                         glVertex3f(i*200-2500,100,-1);
                     glEnd();
             }

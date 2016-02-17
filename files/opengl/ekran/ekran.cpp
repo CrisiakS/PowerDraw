@@ -20,7 +20,7 @@ int program=0;      // Zmienna okreslajaca na jakim kroku jest program
 Video::camera kamera1;
 Video::camera kamera2;
 
-VideoCapture cap1;   // Program bedzie dzialal max na 2 kamery - tu ich deklaracje
+VideoCapture cap1(0);   // Program bedzie dzialal max na 2 kamery - tu ich deklaracje
 VideoCapture cap2;   // -||-
 
 Mat GLFrame;        // Ta plaszczyzna bedzie wyswietlana jako obraz kamery w OPENGL
@@ -41,6 +41,9 @@ void wait(int seconds)
                         glClear(GL_COLOR_BUFFER_BIT);
                         glClear(GL_DEPTH_BUFFER_BIT);
                         glClearColor(0,0,0,0);
+
+                //        kamera1.Capture(cap1);
+
 
                             if(VideoMode==1)
                                 {
@@ -63,7 +66,7 @@ void wait(int seconds)
                     glFlush();
                     glutSwapBuffers();
 
-        }
+                }
         }
 
 

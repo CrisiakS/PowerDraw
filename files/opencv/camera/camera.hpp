@@ -11,6 +11,7 @@
                     Mat CapturedFrame;
                     Mat TempFrame;
                     Mat FinalFrame;
+                    Mat DrawingMask;
 
                     Modyfikator parameters;
                     Point point;
@@ -21,6 +22,8 @@
                     void LiczXY();
                     int getX();
                     int getY();
+           //         void drawAt(int x, int y,int r,int g,int b,int pointsize);
+
 
             };
     }

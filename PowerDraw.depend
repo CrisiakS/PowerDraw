@@ -12,7 +12,7 @@
 1455726265 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\main\main.cpp
 	"main.hpp"
 
-1455726302 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\main\main.hpp
+1455730597 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\main\main.hpp
 	"../opengl/inicjalizacja.hpp"
 	"../all-in-one/all-in-one.hpp"
 	"../opencv/main/main.hpp"
@@ -251,7 +251,7 @@
 
 1455377276 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\inicjalizacja.hpp
 
-1455726909 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.cpp
+1455730443 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.cpp
 	"ekran.hpp"
 	<GL/freeglut.h>
 	"../../opencv/main/main.hpp"
@@ -626,11 +626,12 @@
 	<opencv2/highgui.hpp>
 	<opencv2/video.hpp>
 
-1455721908 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\modifier\modyfikator.cpp
+1455730085 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\modifier\modyfikator.cpp
 	"modyfikator.hpp"
 	"../biblioteki.hpp"
+	"../../debug/debug.hpp"
 
-1455721917 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\modifier\modyfikator.hpp
+1455729935 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\modifier\modyfikator.hpp
 	"../biblioteki.hpp"
 
 1455545109 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\text\text.hpp
@@ -652,7 +653,7 @@
 	"../biblioteki.hpp"
 	<iostream>
 
-1455725626 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\rysowanie\drawing.cpp
+1455727549 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\rysowanie\drawing.cpp
 	"drawing.hpp"
 	"../../opencv/biblioteki.hpp"
 	<vector>
@@ -663,7 +664,7 @@
 	<GL/freeglut.h>
 	<vector>
 
-1455724671 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.cpp
+1455730557 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.cpp
 	"mainmenu.hpp"
 	"../../opengl/text/tekst.hpp"
 	<GL/freeglut.h>
@@ -678,10 +679,10 @@
 	<GL/freeglut.h>
 	"../../main/main.hpp"
 
-1455726762 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\camera\camera.cpp
+1455729488 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\camera\camera.cpp
 	"camera.hpp"
 
-1455723502 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\camera\camera.hpp
+1455731337 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\camera\camera.hpp
 	"../biblioteki.hpp"
 	"../modifier/modyfikator.hpp"
 
