@@ -85,6 +85,7 @@ extern options obraz;
                         Mat rgbFrame(640, 480, CV_8UC3);
                         cvtColor(DrawingMask, rgbFrame, CV_BGR2RGB);
 
+<<<<<<< HEAD
                         // ...now let it convert it to RGBA
                         Mat newSrc = Mat(rgbFrame.rows, rgbFrame.cols, CV_8UC4);
                             int from_to[] = { 0,0, 1,1, 2,2, 3,3 };
@@ -94,6 +95,9 @@ extern options obraz;
 
             }
     */
+=======
+
+>>>>>>> parent of 8215a5b... Uporzadkowanie pliku main
     }
 
 

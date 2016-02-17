@@ -1,5 +1,5 @@
 #include "main.hpp"
-options obraz;
+
 
     int main(int argc,char *argv[])
         {

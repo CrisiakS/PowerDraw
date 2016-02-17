@@ -16,10 +16,12 @@ extern int VideoMode;
 
                 if (key=='z')
                 {
+                    Video::GotoHSV();
                     VideoMode=1;
                 }
                 if (key=='x')
                 {
+                    Video::GotoRGB();
                     VideoMode=2;
                 }
             }

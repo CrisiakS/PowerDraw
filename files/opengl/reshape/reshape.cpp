@@ -1,35 +1,20 @@
 #include "reshape.hpp"
-#include "../ekran/ekran.hpp"
 #include<GL/freeglut.h>
-#include "../../main/main.hpp"
 
-extern options obraz;
 void reshape(int width, int height)
 {
-        if(width!=obraz.width)
-            width=obraz.width;
-
-        if(height!=obraz.height)
-            height=obraz.height;
-
-        if(height==0)
-            height=1;
-
-        glutReshapeWindow(width,height);
-
-
             float ratio = (float)height/width ;
 
             glMatrixMode(GL_PROJECTION);
             glLoadIdentity();
-            glViewport(0,0,width,height);
+            glViewport(0,0,640,480);
 
 
 
-                    gluPerspective(obraz.angle,
+                    gluPerspective(45,
                                    ratio,
-                                   obraz.near_distanse,
-                                   obraz.far_distanse);
+                                   0,
+                                   100000);
 
                                    glFrustum(0,640,480,0,1,0);
 
