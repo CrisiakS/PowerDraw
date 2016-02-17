@@ -13,18 +13,19 @@
                     Mat FinalFrame;
                     Mat DrawingMask;
 
+                    bool capturing=false;
+
                     Modyfikator parameters;
                     Point point;
                 public:
-                    void Capture(VideoCapture &capture);
+                    void Capture(VideoCapture &capture,int id);
+                    void StopCapture(VideoCapture &capture);
                     Mat GetCapturedFrame();
                     Mat GetFinalFrame();
                     void LiczXY();
                     int getX();
                     int getY();
-           //         void drawAt(int x, int y,int r,int g,int b,int pointsize);
-
-
+                    void drawAt(int x, int y,int r,int g,int b,int pointsize);
             };
     }
 #endif // camera_hpp

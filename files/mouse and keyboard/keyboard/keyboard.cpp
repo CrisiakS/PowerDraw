@@ -1,7 +1,6 @@
 #include "keyboard.hpp"
 #include "../../debug/debug.hpp"
 #include <GL/glut.h>
-#include "../../opencv/main/main.hpp"
 
 extern int VideoMode;
 
@@ -16,11 +15,11 @@ extern int VideoMode;
 
                 if (key=='z')
                 {
-                    VideoMode=1;
+
                 }
                 if (key=='x')
                 {
-                    VideoMode=2;
+
                 }
             }
         }

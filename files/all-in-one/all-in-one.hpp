@@ -1,7 +1,3 @@
-/*
-
-
-*/
 #ifndef all_in_one_hpp
 #define all_in_one_hpp
 

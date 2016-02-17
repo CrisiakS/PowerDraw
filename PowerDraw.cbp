@@ -45,13 +45,16 @@
 		<Unit filename="files/all-in-one/all-in-one.hpp" />
 		<Unit filename="files/debug/debug.cpp" />
 		<Unit filename="files/debug/debug.hpp" />
+		<Unit filename="files/engine/mainmenu/mainmenu.cpp" />
+		<Unit filename="files/engine/mainmenu/mainmenu.hpp" />
 		<Unit filename="files/main/main.cpp" />
 		<Unit filename="files/main/main.hpp" />
 		<Unit filename="files/mouse and keyboard/keyboard/keyboard.cpp" />
 		<Unit filename="files/mouse and keyboard/keyboard/keyboard.hpp" />
 		<Unit filename="files/opencv/biblioteki.hpp" />
+		<Unit filename="files/opencv/camera/camera.cpp" />
+		<Unit filename="files/opencv/camera/camera.hpp" />
 		<Unit filename="files/opencv/main/main.cpp" />
-		<Unit filename="files/opencv/main/main.hpp" />
 		<Unit filename="files/opencv/modifier/modyfikator.cpp" />
 		<Unit filename="files/opencv/modifier/modyfikator.hpp" />
 		<Unit filename="files/opencv/point/point.cpp" />
@@ -59,6 +62,8 @@
 		<Unit filename="files/opengl/ekran/ekran.cpp" />
 		<Unit filename="files/opengl/ekran/ekran.hpp" />
 		<Unit filename="files/opengl/inicjalizacja.cpp" />
+		<Unit filename="files/opengl/reshape/reshape.cpp" />
+		<Unit filename="files/opengl/reshape/reshape.hpp" />
 		<Unit filename="files/opengl/rysowanie/drawing.cpp" />
 		<Unit filename="files/opengl/rysowanie/drawing.hpp" />
 		<Unit filename="files/opengl/text/tekst.cpp" />

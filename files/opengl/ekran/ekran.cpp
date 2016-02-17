@@ -15,29 +15,20 @@
 #include "../../opencv/camera/camera.hpp"
 ////////////////////////////////////////
 using namespace std;
-
-extern Mat TextureFrame;
-extern Mat frame;
-
-extern int posX;
-extern int posY;
+using namespace cv;
 
 extern int VideoMode;
-bool once=false;
-
-extern Video::Point punkt;
-extern Mat ReadyMask;
 ////////////////////////////////////////////
 
 int program=0;      // Zmienna okreslajaca na jakim kroku jest program
 Video::camera kamera1;
 Video::camera kamera2;
 
-VideoCapture cap1;   // Program bedzie dzialal max na 2 kamery - tu ich deklaracje
+VideoCapture cap1(0);   // Program bedzie dzialal max na 2 kamery - tu ich deklaracje
 VideoCapture cap2;   // -||-
 
 Mat GLFrame;        // Ta plaszczyzna bedzie wyswietlana jako obraz kamery w OPENGL
-
+OpenGL::options obraz;
 ////////////////////////////////////////////
 /*
 void wait(int seconds)
@@ -57,20 +48,16 @@ void wait(int seconds)
                         glClearColor(0,0,0,0);
                     //////////////////////////////////////////////////////
 
-                        kamera1.Capture(cap1);
+                        kamera1.Capture(cap1,0);
                         imshow("Dupa",kamera1.GetCapturedFrame());
-                        frame=kamera1.GetFinalFrame();
+                        GLFrame=kamera1.GetFinalFrame();
 
 
                     ///////////////////////////////////////////////////////
 
 
-
-                //        kamera1.Capture(cap1);
-
-
-                            if(VideoMode==1)
-                                {
+                   //         if(VideoMode==1)
+                          //      {
                  //               stworz_napis("Teraz Rysujesz",5,31,GLUT_BITMAP_9_BY_15,0,1,0);
                     //            Video::CaptureIDLE();
 
@@ -78,12 +65,13 @@ void wait(int seconds)
 
                             glRasterPos3f(-673,1230,10);
 
-                            glDrawPixels( frame.size().width, frame.size().height, GL_RGBA, GL_UNSIGNED_BYTE, frame.ptr() );  // Rysowanie kamery
-                                }
-                        if(program==0)
-                            {
+                            if(!GLFrame.empty())
+                            glDrawPixels( GLFrame.size().width, GLFrame.size().height, GL_RGBA, GL_UNSIGNED_BYTE, GLFrame.ptr() );  // Rysowanie kamery
+                             //   }
+                      //  if(program==0)
+                      //      {
                                 mainmenu();
-                            }
+                        //    }
                     ///////////////////////////////////////////////////////
                     glFlush();
                     glutSwapBuffers();
