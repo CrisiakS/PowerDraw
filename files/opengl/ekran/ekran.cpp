@@ -13,6 +13,7 @@
 
 #include "../../engine/mainmenu/mainmenu.hpp"
 #include "../../opencv/camera/camera.hpp"
+#include "../text3d/text3d.hpp"
 ////////////////////////////////////////
 using namespace std;
 using namespace cv;
@@ -35,7 +36,6 @@ void wait(int seconds)
     while (clock() < endwait) {}
 }
 */
-
     namespace OpenGL
         {
             void display()
@@ -48,15 +48,18 @@ void wait(int seconds)
                     if(program==0)
                         {
                              mainmenu();
+
                         }
                     if(program==1)
                     {
+
+
                         kamera1.Capture(cap1,0);
                         GLFrame=kamera1.GetFinalFrame();
 
                         kamera1.LiczXY();
                         cout<<kamera1.getX()<<"\t"<<kamera1.getY()<<endl;
-                        kamera1.drawAt(kamera1.getX(),kamera1.getY(),1,1,1,10);
+                        kamera1.drawAt(kamera1.getX(),kamera1.getY(),1,1,1,5);
 
                             glRasterPos3f(-673,1230,10);
 
@@ -69,6 +72,7 @@ void wait(int seconds)
                             if(!GLFrame.empty())
                             glDrawPixels( GLFrame.size().width, GLFrame.size().height, GL_RGBA, GL_UNSIGNED_BYTE, GLFrame.ptr() );  // Rysowanie kamery
 
+                            mainmenu();
                     }
 
 

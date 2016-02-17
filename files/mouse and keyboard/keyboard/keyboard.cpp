@@ -2,7 +2,7 @@
 #include "../../debug/debug.hpp"
 #include <GL/glut.h>
 
-extern int VideoMode;
+extern int program;
 
     namespace OpenGL
         {
@@ -15,11 +15,11 @@ extern int VideoMode;
 
                 if (key=='z')
                 {
-
+                    program=0;
                 }
                 if (key=='x')
                 {
-
+                    program=1;
                 }
             }
         }

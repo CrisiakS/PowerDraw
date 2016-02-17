@@ -55,7 +55,7 @@ extern OpenGL::options obraz;
                         double dArea = oMoments.m00;
 
 
-                            if (dArea > 1500)
+                            if (dArea > 100)
                                 {
                                     point.x = dM10 / dArea;
                                     point.y = dM01 / dArea;

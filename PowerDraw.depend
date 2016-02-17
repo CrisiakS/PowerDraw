@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 6422948 
 
-1455731920 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\inicjalizacja.cpp
+1455752171 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\inicjalizacja.cpp
 	<GL/freeglut.h>
 	<string>
 	"inicjalizacja.hpp"
@@ -9,6 +9,7 @@
 	"../mouse and keyboard/keyboard/keyboard.hpp"
 	"reshape/reshape.hpp"
 	"../debug/debug.hpp"
+	"ekran/ekran.hpp"
 
 1455723635 ent of 8215a5b... Uporzadkowanie pliku main
 	<GL/freeglut.h>
@@ -324,7 +325,7 @@
 
 1455377276 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\inicjalizacja.hpp
 
-1455743033 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.cpp
+1455751919 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.cpp
 	"ekran.hpp"
 	<GL/freeglut.h>
 	"../../opencv/main/main.hpp"
@@ -337,8 +338,9 @@
 	<vector>
 	"../../engine/mainmenu/mainmenu.hpp"
 	"../../opencv/camera/camera.hpp"
+	"../text3d/text3d.hpp"
 
-1455735634 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.hpp
+1455752246 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.hpp
 
 1455742676 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\main\main.cpp
 	<string>
@@ -679,7 +681,7 @@
 1455390986 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\debug\debug.hpp
 	<string>
 
-1455733575 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\mouse and keyboard\keyboard\keyboard.cpp
+1455744154 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\mouse and keyboard\keyboard\keyboard.cpp
 	"keyboard.hpp"
 	"../../debug/debug.hpp"
 	<GL/glut.h>
@@ -734,20 +736,22 @@
 	<GL/freeglut.h>
 	<vector>
 
-1455743242 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.cpp
+1455751879 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.cpp
 	"mainmenu.hpp"
 	"../../opengl/text/tekst.hpp"
+	"../../opengl/text3d/text3d.hpp"
 	<GL/freeglut.h>
 
 1455713208 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.hpp
 
 1455714339 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\reshape\reshape.hpp
 
-1455731920 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\reshape\reshape.cpp
+1455752199 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\reshape\reshape.cpp
 	"reshape.hpp"
+	"../ekran/ekran.hpp"
 	<GL/freeglut.h>
 
-1455742125 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\camera\camera.cpp
+1455749149 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\camera\camera.cpp
 	"camera.hpp"
 	"../../opengl/ekran/ekran.hpp"
 	<iostream>
@@ -755,4 +759,11 @@
 1455741485 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\camera\camera.hpp
 	"../biblioteki.hpp"
 	"../modifier/modyfikator.hpp"
+
+1455751390 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\text3d\text3d.cpp
+	"text3d.hpp"
+	<GL/freeglut.h>
+	<string>
+
+1455750538 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\text3d\text3d.hpp
 
