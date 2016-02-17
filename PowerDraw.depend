@@ -324,7 +324,7 @@
 
 1455377276 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\inicjalizacja.hpp
 
-1455736804 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.cpp
+1455741152 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.cpp
 	"ekran.hpp"
 	<GL/freeglut.h>
 	"../../opencv/main/main.hpp"
@@ -751,11 +751,12 @@
 	"reshape.hpp"
 	<GL/freeglut.h>
 
-1455735715 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\camera\camera.cpp
+1455740990 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\camera\camera.cpp
 	"camera.hpp"
 	"../../opengl/ekran/ekran.hpp"
+	<iostream>
 
-1455736840 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\camera\camera.hpp
+1455740270 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\camera\camera.hpp
 	"../biblioteki.hpp"
 	"../modifier/modyfikator.hpp"
 

@@ -52,6 +52,11 @@ void wait(int seconds)
                         imshow("Dupa",kamera1.GetCapturedFrame());
                         GLFrame=kamera1.GetFinalFrame();
 
+                        kamera1.LiczXY();
+                        cout<<kamera1.getX()<<"\t"<<kamera1.getY()<<endl;
+                        kamera1.drawAt(kamera1.getX(),kamera1.getY(),1,1,1,10);
+
+                     //   GLFrame=kamera1.GetFinalFrame();
 
                     ///////////////////////////////////////////////////////
 

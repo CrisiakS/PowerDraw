@@ -1,5 +1,7 @@
 #include "camera.hpp"
 #include "../../opengl/ekran/ekran.hpp"
+#include <iostream>
+using namespace std;
 extern OpenGL::options obraz;
 
     namespace Video
@@ -78,13 +80,12 @@ extern OpenGL::options obraz;
                             for(int x=((point.x-pointsize/2));x<(point.x+(pointsize/2));x++)
                             {
                                    Vec3b color = DrawingMask.at<Vec3b>(Point(x,y));
-                                   color[0]=r;
-                                   color[1]=g;
-                                   color[2]=b;
+                                   color[0]=255;
+                                   color[1]=255;
+                                   color[2]=255;
                                    DrawingMask.at<Vec3b>(Point(x,y)) = color;
                             }
                         }
-
                         Mat rgbFrame(640, 480, CV_8UC3);
                         cvtColor(DrawingMask, rgbFrame, CV_BGR2RGB);
                         // ...now let it convert it to RGBA
@@ -93,6 +94,14 @@ extern OpenGL::options obraz;
                         mixChannels(&rgbFrame, 2, &newSrc, 1, from_to, 4);
 
                         TempFrame=newSrc;
+                        FinalFrame+=TempFrame;
+            }
+
+            camera::camera()
+            {
+                DrawingMask.create(480,640,CV_8UC3);
+                TempFrame.create(480,640,CV_8UC4);
+                FinalFrame.create(480,640,CV_8UC4);
 
             }
     }
