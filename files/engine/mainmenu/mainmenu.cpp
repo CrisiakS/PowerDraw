@@ -7,9 +7,7 @@
 #include <vector>
 #include <math.h>
 
-#define STARS_AMOUNT 200
-#define STARS_END 2000;
-#define STARS_START 5000;
+#define STARS_AMOUNT 500
 
 using namespace std;
 
@@ -20,6 +18,8 @@ float showpowerdraw=0;
 float powerdrawz=0;
 
 float presstart=0;
+
+
 
 float r=0.3;
 float g=1;
@@ -40,8 +40,8 @@ float b=0.3;
 
             void star::resetXYZ()
                 {
-                    x=rand()%5000-2000;
-                    y=rand()%5000-2000;
+                    x=rand()%20000-8000;
+                    y=rand()%10000-4000;
                     z=40;
                     alpha=0;
                     pointsize=rand()%3+1;
@@ -63,24 +63,32 @@ float b=0.3;
             glPushMatrix();
             glColor3f(r,g,b);
                 glBegin(GL_LINES);
-                    glVertex3f(-10000,-1000,29.9);
-                    glVertex3f(10000,-1000,29.9);
+                    glVertex3f(-20000,-1000,29.9);
+                    glVertex3f(20000,-1000,29.9);
                 glEnd();
 
             glColor3f(r,g,b);
                 glBegin(GL_LINES);
-                    glVertex3f(-10000,1000,29.9);
-                    glVertex3f(10000,1000,29.9);
+                    glVertex3f(-20000,1000,29.9);
+                    glVertex3f(20000,1000,29.9);
                 glEnd();
 
             for(float i=30;i>0;i--)
             {
                 glColor4f(r,g,b,0.02*i);
                     glBegin(GL_LINES);
-                        glVertex3f(-10000,1000,i-retrowave);
-                        glVertex3f(10000,1000,i-retrowave);
+                        glVertex3f(-20000,1000,i-retrowave*2);
+                        glVertex3f(20000,1000,i-retrowave*2);
                     glEnd();
 
+                glColor4f(r,g,b,0.02*i);
+                    glBegin(GL_LINES);
+                        glVertex3f(-20000,-1000,i-retrowave*2);
+                        glVertex3f(20000,-1000,i-retrowave*2);
+                    glEnd();
+            }
+            for(float i=100;i>-50;i-=2)
+            {
                 glColor4f(r,g,b,1);
                     glBegin(GL_LINES);
                         glVertex3f(i*200-2500,1000,29.9);
@@ -88,11 +96,6 @@ float b=0.3;
                         glVertex3f(i*200-2500,1000,-1);
                     glEnd();
                 ////////////////////////////////////
-                glColor4f(r,g,b,0.02*i);
-                    glBegin(GL_LINES);
-                        glVertex3f(-10000,-1000,i-retrowave);
-                        glVertex3f(10000,-1000,i-retrowave);
-                    glEnd();
 
                 glColor4f(r,g,b,1);
                     glBegin(GL_LINES);
@@ -101,7 +104,6 @@ float b=0.3;
                         glVertex3f(i*200-2500,-1000,-1);
                     glEnd();
             }
-
             if(showmethatbeauty>=0)
             {
                 glColor4f(0,0,0,showmethatbeauty-0.001);
@@ -116,21 +118,21 @@ float b=0.3;
             else
             {
                 const unsigned char pdraw[]="PowerDRAW";
-                if(powerdrawz<=5)
+                if(powerdrawz<=3)
                 {
-                    OpenGL::Text3D(pdraw,-150,200,powerdrawz,1,1,sin(presstart),showpowerdraw);
+                    OpenGL::Text3D(pdraw,-150,250,powerdrawz,1,1,sin(presstart),showpowerdraw);
                     powerdrawz+=0.05;
                     showpowerdraw+=0.5;
                 }
                 else
                 {
-                        OpenGL::Text3D(pdraw,-150,200,5,1,1,sin(presstart),1);
+                        OpenGL::Text3D(pdraw,-150,250,3,1,1,sin(presstart),1);
                         if(presstart>1000)
                         {
                             presstart=0;
                         }
-                        const unsigned char pdrawpress[]="Wcisnij 'z' by rysowac :)";
-                        OpenGL::Text3D(pdrawpress,-920,500,40,1,1,0,sin(presstart));
+                        const unsigned char pdrawpress[]="Wcisnij ENTER by rozpoczac";
+                        OpenGL::Text3D(pdrawpress,-920,700,30,1,1,0,sin(presstart));
                         presstart+=0.1;
 
                 }
@@ -171,6 +173,9 @@ float b=0.3;
 
                 const unsigned char a[]="Piotr Jagusiak prezentuje...";
                 OpenGL::Text3D(a,-1000,200,showmethatbeauty*30,1,1,0,showmethatbeauty);
+
+                const unsigned char b[]="PowerDRAW";
+                OpenGL::Text3D(b,-700,-500,12,1,1,0,1);
 
             glPopMatrix();
         }

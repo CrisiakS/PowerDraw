@@ -6,7 +6,7 @@ extern OpenGL::options obraz;
 
 void reshape(int width, int height)
 {
-            float ratio = (float)height/width ;
+            float ratio = (float)width/height ;
 
             glMatrixMode(GL_PROJECTION);
             glLoadIdentity();
@@ -14,7 +14,7 @@ void reshape(int width, int height)
 
 
 
-                    gluPerspective(obraz.angle,
+                    gluPerspective(obraz.angle+width/80,
                                    ratio,
                                    obraz.near_distanse,
                                    obraz.far_distanse);

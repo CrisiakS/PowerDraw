@@ -16,11 +16,13 @@ extern int program;
                 if (key=='z')
                 {
                     program=0;
+
                 }
                 if (key=='x')
                 {
                     program=1;
                 }
+
             }
         }
 

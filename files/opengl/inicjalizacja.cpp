@@ -20,9 +20,6 @@ extern OpenGL::options obraz;
 
         void init()
             {
-                glutInitDisplayMode(GLUT_DEPTH and GLUT_DOUBLE and GLUT_RGBA);
-                glutInitWindowSize(obraz.width,obraz.height);
-                glutCreateWindow("PowerDraw");
                 glutDisplayFunc(display);
                 glutKeyboardFunc(keyboard);
                 glutReshapeFunc(reshape);

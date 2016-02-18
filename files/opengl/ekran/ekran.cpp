@@ -14,11 +14,13 @@
 #include "../../engine/mainmenu/mainmenu.hpp"
 #include "../../opencv/camera/camera.hpp"
 #include "../text3d/text3d.hpp"
+#include "../inicjalizacja.hpp"
 ////////////////////////////////////////
 using namespace std;
 using namespace cv;
 
 int program=0;      // Zmienna okreslajaca na jakim kroku jest program
+bool gumkuj=0;
 Video::camera kamera1;
 Video::camera kamera2;
 
@@ -27,6 +29,8 @@ VideoCapture cap2;   // -||-
 
 Mat GLFrame;        // Ta plaszczyzna bedzie wyswietlana jako obraz kamery w OPENGL
 OpenGL::options obraz;
+
+bool once=true;
 ////////////////////////////////////////////
 /*
 void wait(int seconds)
@@ -47,8 +51,13 @@ void wait(int seconds)
 
                     if(program==0)
                         {
-                             mainmenu();
+                             if(once)
+                             {
 
+                                once=false;
+                             }
+
+                            mainmenu();
                         }
                     if(program==1)
                     {
@@ -59,9 +68,11 @@ void wait(int seconds)
 
                         kamera1.LiczXY();
                         cout<<kamera1.getX()<<"\t"<<kamera1.getY()<<endl;
-                        kamera1.drawAt(kamera1.getX(),kamera1.getY(),1,1,1,5);
 
-                            glRasterPos3f(-673,1230,10);
+                        kamera1.drawAt(kamera1.getX(),kamera1.getY(),1,1,1,10);
+
+                            glPushMatrix();
+                            glRasterPos3f(-673,1230,20);
 
                             Mat temp;
                             flip(kamera1.GetCapturedFrame(),temp,0);
@@ -71,7 +82,7 @@ void wait(int seconds)
                             glDrawPixels( temp.size().width, temp.size().height, GL_RGB, GL_UNSIGNED_BYTE, temp.ptr() );  // Rysowanie kamery
                             if(!GLFrame.empty())
                             glDrawPixels( GLFrame.size().width, GLFrame.size().height, GL_RGBA, GL_UNSIGNED_BYTE, GLFrame.ptr() );  // Rysowanie kamery
-
+                            glPopMatrix();
                             mainmenu();
                     }
 

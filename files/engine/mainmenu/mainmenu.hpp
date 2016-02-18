@@ -7,8 +7,8 @@
 
         struct star
             {
-                float x=rand()%5000-2000;
-                float y=rand()%5000-2000;
+                float x=rand()%20000-8000;
+                float y=rand()%10000-4000;
                 float z=rand()%40+10;
                 float alpha=0;
 
