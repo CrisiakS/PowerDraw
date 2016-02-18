@@ -6,6 +6,9 @@
 #include "../mouse and keyboard/keyboard/keyboard.hpp"
 #include "reshape/reshape.hpp"
 #include "../debug/debug.hpp"
+#include "ekran/ekran.hpp"
+
+extern OpenGL::options obraz;
 
     namespace OpenGL
     {
@@ -18,7 +21,7 @@
         void init()
             {
                 glutInitDisplayMode(GLUT_DEPTH and GLUT_DOUBLE and GLUT_RGBA);
-                glutInitWindowSize(640,480);
+                glutInitWindowSize(obraz.width,obraz.height);
                 glutCreateWindow("PowerDraw");
                 glutDisplayFunc(display);
                 glutKeyboardFunc(keyboard);

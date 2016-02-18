@@ -82,8 +82,10 @@
 	<GL/freeglut.h>
 	"camera.hpp"
 
-1455735654 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\main\main.cpp
+1455757324 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\main\main.cpp
 	"main.hpp"
+	<time.h>
+	<cstdlib>
 
 1455735647 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\main\main.hpp
 	"../opengl/inicjalizacja.hpp"
@@ -736,13 +738,19 @@
 	<GL/freeglut.h>
 	<vector>
 
-1455751879 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.cpp
+1455761932 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.cpp
 	"mainmenu.hpp"
 	"../../opengl/text/tekst.hpp"
 	"../../opengl/text3d/text3d.hpp"
 	<GL/freeglut.h>
+	<time.h>
+	<cstdlib>
+	<vector>
+	<math.h>
 
-1455713208 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.hpp
+1455759990 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.hpp
+	<time.h>
+	<cstdlib>
 
 1455714339 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\reshape\reshape.hpp
 
