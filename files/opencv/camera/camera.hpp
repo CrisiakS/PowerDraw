@@ -13,6 +13,7 @@
                     Mat FinalFrame;
 
                     Mat DrawingMask;
+                    Mat Mini;
 
                     bool capturing=false;
 

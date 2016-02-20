@@ -1,9 +1,11 @@
 #include "keyboard.hpp"
+#include "../../engine/mainmenu/mainmenu.hpp"
 #include "../../debug/debug.hpp"
 #include <GL/freeglut.h>
 
 extern int program;
 extern bool titlescreen_end;
+extern short int menu_step;
 
     namespace OpenGL
         {
@@ -29,9 +31,35 @@ extern bool titlescreen_end;
                     glutFullScreenToggle();
                 }
 
-                if(key==GLUT_KEY_BEGIN);
+                if(key==13)
                 {
-                    if(titlescreen_end) program=1;
+                    program=1;
+                }
+                if(key=='r')
+                {
+
+                }
+                if(key=='f')
+                {
+
+                }
+            }
+
+            void keyup(unsigned char key,int x, int y)
+            {
+
+
+            }
+
+            void SpecialInput(int key, int x, int y)
+            {
+                if(key==GLUT_KEY_DOWN)
+                {
+                    if(menu_step<3)menu_step++;
+                }
+                if(key==GLUT_KEY_UP)
+                {
+                    if(menu_step>0)menu_step--;
                 }
             }
         }

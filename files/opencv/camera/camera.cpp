@@ -126,7 +126,7 @@ extern OpenGL::options obraz;
                 DrawingMask.create(480,640,CV_8UC3);
                 TempFrame.create(480,640,CV_8UC4);
                 FinalFrame.create(480,640,CV_8UC4);
-
+                Mini.create(240,320,CV_8UC4);
             }
     }
 

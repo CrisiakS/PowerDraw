@@ -15,13 +15,15 @@ extern OpenGL::options obraz;
         void timer( int extra )
             {
                 glutPostRedisplay();
-                glutTimerFunc( 30, timer, 0 );
+                glutTimerFunc( 33, timer, 0 );
             }
 
         void init()
             {
                 glutDisplayFunc(display);
                 glutKeyboardFunc(keyboard);
+                glutKeyboardUpFunc(keyup);
+                glutSpecialFunc(SpecialInput);
                 glutReshapeFunc(reshape);
                 glutTimerFunc(0,timer,0);
 
@@ -33,10 +35,6 @@ extern OpenGL::options obraz;
 
                 glEnable(GL_POINT_SMOOTH);
                 glHint(GL_POINT_SMOOTH, GL_NICEST);
-
-
-
-
             }
 
     }
