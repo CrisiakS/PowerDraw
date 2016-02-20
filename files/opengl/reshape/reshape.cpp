@@ -14,12 +14,12 @@ void reshape(int width, int height)
 
 
 
-                    gluPerspective(obraz.angle+width/80,
+                    gluPerspective(obraz.angle+width/60,
                                    ratio,
                                    obraz.near_distanse,
                                    obraz.far_distanse);
 
-                                   glFrustum(0,(float)width,(float)height,0,1,0);
+                                   glFrustum(0,(float)width,(float)height+30,0,1,0);
 
             glMatrixMode(GL_MODELVIEW);
 }

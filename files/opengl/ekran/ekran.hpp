@@ -7,14 +7,14 @@
 
             struct options
                 {
-                    int width=640;
-                    int height=480;
+                    int width=1024;
+                    int height=768;
 
                     int angle=45;
                     int near_distanse=0;
                     int far_distanse=10000;
 
-                    bool fullscreen=false;
+                    bool fullscreen=true;
 
                 };
 

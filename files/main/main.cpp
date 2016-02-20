@@ -14,10 +14,11 @@ extern OpenGL::options obraz;
             glutInitWindowPosition(0,0);
 
             glutGameModeString("1366x768:32@60");
+            glutCreateWindow("PowerDraw");
+
             if(obraz.fullscreen)
                 glutFullScreenToggle();
 
-            glutCreateWindow("PowerDraw");
             OpenGL::init();
 
             srand(time(NULL));

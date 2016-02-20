@@ -12,6 +12,9 @@
             void Draw();
             void setXYZ(int xx,int yy,int zz);
             void moveXYZ(int xx,int yy,int zz);
+            int getX();
+            int getY();
+            int GetZ();
             lines(int xx,int yy,int zz,
                          int xam,int yam,
                          float rr,float gg, float bb, float aa, int spacee);

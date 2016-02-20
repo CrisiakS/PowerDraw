@@ -16,6 +16,7 @@
 #include "../text3d/text3d.hpp"
 #include "../inicjalizacja.hpp"
 #include "../../engine/fade/fade.hpp"
+#include "../../engine/lines/lines.hpp"
 ////////////////////////////////////////
 using namespace std;
 using namespace cv;
@@ -30,6 +31,19 @@ VideoCapture cap2;   // -||-
 
 Mat GLFrame;        // Ta plaszczyzna bedzie wyswietlana jako obraz kamery w OPENGL
 OpenGL::options obraz;
+
+extern bool titlescreen_end;
+
+
+OpenGL::lines liniaTop(-14075,-600,30,
+                        150,25,
+                        0.3,1,0.3,1,
+                        50);
+
+OpenGL::lines liniaDown(-14075,1200,30,
+                        100,25,
+                        0.3,1,0.3,1,
+                        50);
 ////////////////////////////////////////////
     namespace OpenGL
         {
@@ -46,6 +60,18 @@ OpenGL::options obraz;
                             FadeIn(5);
                         }
                     if(program==1)
+                        {
+                            if(liniaDown.getY()<3000)
+                                liniaDown.moveXYZ(0,50,0);
+
+                            if(liniaTop.getY()>-2400)
+                                liniaTop.moveXYZ(0,-50,0);
+
+                            titlescreen();
+                        }
+
+
+                    if(program==2)
                     {
                         kamera1.Capture(cap1,0);
                         GLFrame=kamera1.GetFinalFrame();
@@ -56,15 +82,15 @@ OpenGL::options obraz;
                         kamera1.drawAt(kamera1.getX(),kamera1.getY(),1,1,1,10);
 
                             glPushMatrix();
-                            glRasterPos3f(kamera1.getX(),kamera1.getY(),20);
+                            glRasterPos3f(-4500,800,20);
 
                             Mat temp;
                             flip(kamera1.GetCapturedFrame(),temp,0);
                             cvtColor(temp,temp,CV_BGR2RGB);
 
-                            if(!kamera1.GetCapturedFrame().empty())
+                     //       if(!kamera1.GetCapturedFrame().empty())
                             glDrawPixels( temp.size().width, temp.size().height, GL_RGB, GL_UNSIGNED_BYTE, temp.ptr() );  // Rysowanie kamery
-                            if(!GLFrame.empty())
+                      //      if(!GLFrame.empty())
                             glDrawPixels( GLFrame.size().width, GLFrame.size().height, GL_RGBA, GL_UNSIGNED_BYTE, GLFrame.ptr() );  // Rysowanie kamery
                             glPopMatrix();
                     }
