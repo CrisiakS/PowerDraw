@@ -14,7 +14,7 @@
                     int near_distanse=0;
                     int far_distanse=10000;
 
-                    bool fullscreen=true;
+                    bool fullscreen=false;
 
                 };
 

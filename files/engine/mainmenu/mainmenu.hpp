@@ -3,24 +3,22 @@
 
     #include <time.h>
     #include <cstdlib>
-    void mainmenu();
+    void titlescreen();
+    void  FadeIn(float speed);
+    void FadeOut(float speed);
+    void ShootingStars();
 
-        struct star
+    bool FadeOutEnd();
+    bool FadeInEnd();
+
+        struct text3d
             {
-                float x=rand()%20000-8000;
-                float y=rand()%10000-4000;
-                float z=rand()%40+10;
-                float alpha=0;
-
-                int pointsize=rand()%3+1;
-
-                float getZ();
-                float getY();
-                float getX();
-
-                void resetXYZ();
-                void Go(float speed);
+                float x,y,z;
+                float r,g,b,a;
 
             };
+
+ ////////////////////////////////////////////////////////////
+
 
 #endif // mainmenu_hpp

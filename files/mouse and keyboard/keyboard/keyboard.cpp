@@ -1,6 +1,6 @@
 #include "keyboard.hpp"
 #include "../../debug/debug.hpp"
-#include <GL/glut.h>
+#include <GL/freeglut.h>
 
 extern int program;
 
@@ -23,6 +23,10 @@ extern int program;
                     program=1;
                 }
 
+                if(key=='p')
+                {
+                    glutFullScreenToggle();
+                }
             }
         }
 

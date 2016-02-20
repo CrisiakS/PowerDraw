@@ -10,7 +10,7 @@ void reshape(int width, int height)
 
             glMatrixMode(GL_PROJECTION);
             glLoadIdentity();
-            glViewport(0,0,width,height);
+            glViewport(0,0,(float)width,(float)height);
 
 
 
@@ -19,8 +19,7 @@ void reshape(int width, int height)
                                    obraz.near_distanse,
                                    obraz.far_distanse);
 
-                                   glFrustum(0,width,height,0,1,0);
-
+                                   glFrustum(0,(float)width,(float)height,0,1,0);
 
             glMatrixMode(GL_MODELVIEW);
 }

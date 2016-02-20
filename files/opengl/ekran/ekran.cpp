@@ -15,6 +15,7 @@
 #include "../../opencv/camera/camera.hpp"
 #include "../text3d/text3d.hpp"
 #include "../inicjalizacja.hpp"
+#include "../../engine/fade/fade.hpp"
 ////////////////////////////////////////
 using namespace std;
 using namespace cv;
@@ -24,22 +25,12 @@ bool gumkuj=0;
 Video::camera kamera1;
 Video::camera kamera2;
 
-VideoCapture cap1(0);   // Program bedzie dzialal max na 2 kamery - tu ich deklaracje
+VideoCapture cap1;   // Program bedzie dzialal max na 2 kamery - tu ich deklaracje
 VideoCapture cap2;   // -||-
 
 Mat GLFrame;        // Ta plaszczyzna bedzie wyswietlana jako obraz kamery w OPENGL
 OpenGL::options obraz;
-
-bool once=true;
 ////////////////////////////////////////////
-/*
-void wait(int seconds)
-{
-    clock_t endwait;
-    endwait = clock () + seconds * CLOCKS_PER_SEC ;
-    while (clock() < endwait) {}
-}
-*/
     namespace OpenGL
         {
             void display()
@@ -51,18 +42,11 @@ void wait(int seconds)
 
                     if(program==0)
                         {
-                             if(once)
-                             {
-
-                                once=false;
-                             }
-
-                            mainmenu();
+                            titlescreen();
+                            FadeIn(5);
                         }
                     if(program==1)
                     {
-
-
                         kamera1.Capture(cap1,0);
                         GLFrame=kamera1.GetFinalFrame();
 
@@ -72,7 +56,7 @@ void wait(int seconds)
                         kamera1.drawAt(kamera1.getX(),kamera1.getY(),1,1,1,10);
 
                             glPushMatrix();
-                            glRasterPos3f(-673,1230,20);
+                            glRasterPos3f(kamera1.getX(),kamera1.getY(),20);
 
                             Mat temp;
                             flip(kamera1.GetCapturedFrame(),temp,0);
@@ -83,7 +67,6 @@ void wait(int seconds)
                             if(!GLFrame.empty())
                             glDrawPixels( GLFrame.size().width, GLFrame.size().height, GL_RGBA, GL_UNSIGNED_BYTE, GLFrame.ptr() );  // Rysowanie kamery
                             glPopMatrix();
-                            mainmenu();
                     }
 
 
