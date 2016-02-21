@@ -15,7 +15,7 @@ extern OpenGL::options obraz;
         void timer( int extra )
             {
                 glutPostRedisplay();
-                glutTimerFunc( 33, timer, 0 );
+                glutTimerFunc( 16, timer, 0 );
             }
 
         void init()

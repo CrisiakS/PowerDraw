@@ -6,6 +6,8 @@
 extern int program;
 extern bool titlescreen_end;
 extern short int menu_step;
+extern float showmenu;
+extern float showconf;
 
     namespace OpenGL
         {
@@ -18,9 +20,11 @@ extern short int menu_step;
 
                 if (key=='z')
                 {
-                    program=0;
-
+                        showmenu=0;
+                        program=1;
                 }
+
+
                 if (key=='x')
                 {
                     program=2;
@@ -33,7 +37,22 @@ extern short int menu_step;
 
                 if(key==13)
                 {
-                    program=1;
+                    if(program==0)
+                    {
+                        showmenu=0;
+                        program=1;
+                    }
+
+                    if(program==1 and menu_step==2)
+                        {
+                           program=3;
+                           showconf=0;
+                        }
+
+
+                    if(program==1 and menu_step==4)
+                        exit(0);
+
                 }
                 if(key=='r')
                 {
@@ -42,6 +61,14 @@ extern short int menu_step;
                 if(key=='f')
                 {
 
+                }
+                if(key==27)
+                {
+                    if(program==3)
+                    {
+                        showmenu=0;
+                        program=1;
+                    }
                 }
             }
 
@@ -55,12 +82,13 @@ extern short int menu_step;
             {
                 if(key==GLUT_KEY_DOWN)
                 {
-                    if(menu_step<3)menu_step++;
+                    if(menu_step<4 and program==1)menu_step++;
                 }
                 if(key==GLUT_KEY_UP)
                 {
-                    if(menu_step>0)menu_step--;
+                    if(menu_step>0 and program==1)menu_step--;
                 }
+
             }
         }
 

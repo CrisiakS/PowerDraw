@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-#define DEBUGOWANIE true
+#define DEBUGOWANIE false
 using namespace std;
 
         void DebugMessage(string message)

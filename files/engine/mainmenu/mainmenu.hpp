@@ -11,13 +11,6 @@
     bool FadeOutEnd();
     bool FadeInEnd();
 
-        struct text3d
-            {
-                float x,y,z;
-                float r,g,b,a;
-
-            };
-
  ////////////////////////////////////////////////////////////
 
 

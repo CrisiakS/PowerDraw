@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 6422948 
 
-1455992972 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\inicjalizacja.cpp
+1456014304 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\inicjalizacja.cpp
 	<GL/freeglut.h>
 	<string>
 	"inicjalizacja.hpp"
@@ -328,7 +328,7 @@
 
 1455377276 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\inicjalizacja.hpp
 
-1455991386 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.cpp
+1456014499 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.cpp
 	"ekran.hpp"
 	<GL/freeglut.h>
 	"../../opencv/main/main.hpp"
@@ -340,6 +340,7 @@
 	<time.h>
 	<vector>
 	"../../engine/mainmenu/mainmenu.hpp"
+	"../../engine/configmenu/config.hpp"
 	"../../opencv/camera/camera.hpp"
 	"../text3d/text3d.hpp"
 	"../inicjalizacja.hpp"
@@ -348,7 +349,7 @@
 
 1455985897 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\ekran\ekran.hpp
 
-1455742676 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\main\main.cpp
+1456011767 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opencv\main\main.cpp
 	<string>
 	<iostream>
 	"main.hpp"
@@ -679,7 +680,7 @@
 1449835037 c:\mingw\include\opencv2\highgui\highgui.hpp
 	"opencv2/highgui.hpp"
 
-1455391033 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\debug\debug.cpp
+1456009032 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\debug\debug.cpp
 	"debug.hpp"
 	<iostream>
 	<string>
@@ -687,7 +688,7 @@
 1455390986 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\debug\debug.hpp
 	<string>
 
-1455997887 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\mouse and keyboard\keyboard\keyboard.cpp
+1456011681 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\mouse and keyboard\keyboard\keyboard.cpp
 	"keyboard.hpp"
 	"../../engine/mainmenu/mainmenu.hpp"
 	"../../debug/debug.hpp"
@@ -743,7 +744,7 @@
 	<GL/freeglut.h>
 	<vector>
 
-1455997277 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.cpp
+1456000474 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.cpp
 	"mainmenu.hpp"
 	"../../opengl/text3d/text3d.hpp"
 	<GL/freeglut.h>
@@ -752,7 +753,7 @@
 	"../stars/stars.hpp"
 	"../titles/title.hpp"
 
-1455972414 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.hpp
+1456000766 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\mainmenu\mainmenu.hpp
 	<time.h>
 	<cstdlib>
 
@@ -772,12 +773,12 @@
 	"../biblioteki.hpp"
 	"../modifier/modyfikator.hpp"
 
-1455827410 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\text3d\text3d.cpp
+1456001052 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\text3d\text3d.cpp
 	"text3d.hpp"
 	<GL/freeglut.h>
 	<string>
 
-1455984297 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\text3d\text3d.hpp
+1456001059 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\opengl\text3d\text3d.hpp
 
 1455996903 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\lines\lines.cpp
 	"lines.hpp"
@@ -790,7 +791,7 @@
 	<cstdlib>
 	<GL/freeglut.h>
 
-1455974896 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\stars\stars.cpp
+1455998846 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\stars\stars.cpp
 	"stars.hpp"
 
 1455973243 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\fade\fade.cpp
@@ -805,4 +806,11 @@
 	<math.h>
 
 1455978895 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\titles\title.hpp
+
+1456014404 source:c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\configmenu\config.cpp
+	"config.hpp"
+	"../../opengl/text3d/text3d.hpp"
+	<GL/freeglut.h>
+
+1456014767 c:\users\piotrek\desktop\piotrek\powerdraw\powerdraw\files\engine\configmenu\config.hpp
 

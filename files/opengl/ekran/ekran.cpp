@@ -10,8 +10,9 @@
 #include <vector>
 
 /////////////////////////////////////////
-
 #include "../../engine/mainmenu/mainmenu.hpp"
+#include "../../engine/configmenu/config.hpp"
+////////////////////////////////////////
 #include "../../opencv/camera/camera.hpp"
 #include "../text3d/text3d.hpp"
 #include "../inicjalizacja.hpp"
@@ -70,39 +71,43 @@ OpenGL::lines liniaDown(-14075,1200,30,
                             titlescreen();
                         }
 
-
-                    if(program==2)
+                    if(program==3)
                     {
                         if(!once)
                         {
                             once=true;
                         }
+
                         kamera1.Capture(cap1,0);
                         GLFrame=kamera1.GetFinalFrame();
 
-                //        kamera1.LiczXY();
-                //        cout<<kamera1.getX()<<"\t"<<kamera1.getY()<<endl;
+                     //   kamera1.LiczXY();
+                     //   cout<<kamera1.getX()<<"\t"<<kamera1.getY()<<endl;
 
-                 //       kamera1.drawAt(kamera1.getX(),kamera1.getY(),1,1,1,10);
+                    //    kamera1.drawAt(kamera1.getX(),kamera1.getY(),1,1,1,10);
 
                             glPushMatrix();
-                            glRasterPos3f(-4500,800,20);
+                            glRasterPos3f(1400,200,15);
 
                             Mat temp;
                             flip(kamera1.GetCapturedFrame(),temp,0);
                             cvtColor(temp,temp,CV_BGR2RGB);
 
                        //     temp.resize(100,600);
-                            Mat test(240,320,CV_8UC4);
+                            Mat test(120,160,CV_8UC4);
                             resize(temp, test, test.size(), 0, 0,INTER_CUBIC);
-                            if(!kamera1.GetCapturedFrame().empty())
+                            if(!kamera1.GetCapturedFrame().empty() )
                             glDrawPixels( test.size().width, test.size().height, GL_RGB, GL_UNSIGNED_BYTE, test.ptr() );  // Rysowanie kamery
                             if(!GLFrame.empty())
-                   //         glDrawPixels( GLFrame.size().width, GLFrame.size().height, GL_RGBA, GL_UNSIGNED_BYTE, GLFrame.ptr() );  // Rysowanie kamery
+                      //      glDrawPixels( GLFrame.size().width, GLFrame.size().height, GL_RGBA, GL_UNSIGNED_BYTE, GLFrame.ptr() );  // Rysowanie kamery
                             glPopMatrix();
-                            titlescreen();
                     }
 
+                    if(program==3)
+                    {
+                        titlescreen();
+                        configmenu();
+                    }
 
                     ///////////////////////////////////////////////////////
                     glFlush();

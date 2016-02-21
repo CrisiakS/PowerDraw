@@ -19,7 +19,7 @@ bool menu_ready=false;
 bool titlescreen_end=false;
 
 short int menu_step=0;
-short int menu_color[4]={1,1,1,1};
+short int menu_color[5]={1,1,1,1};
 //////////////////////////////////////////
 
 extern OpenGL::lines liniaDown;
@@ -61,7 +61,7 @@ extern int program;
                                     if(liniaDown.getY()==3000)
                                     {
                                         if(showmenu<1) showmenu+=0.1;
-                                        for(int i=0;i<4;i++)
+                                        for(int i=0;i<5;i++)
                                             menu_color[i]=1;
 
                                         glColor3f(1,1,0);
@@ -73,14 +73,21 @@ extern int program;
                                         menu_color[menu_step]=0;
 
                                             OpenGL::Text3D(pdraw,-1400,-300,7.5,1,1,1,showmenu);
+
                                             const unsigned char rysuj[]="Rysuj!";
                                             OpenGL::Text3D(rysuj,-2500,-400,16,1,1,menu_color[0],showmenu);
+
                                             const unsigned char graj[]="Graj!";
                                             OpenGL::Text3D(graj,-2500,-200,16,1,1,menu_color[1],showmenu);
+
                                             const unsigned char konf[]="Konfiguracja";
                                             OpenGL::Text3D(konf,-2500,0,16,1,1,menu_color[2],showmenu);
+
+                                            const unsigned char inf[]="Informacje";
+                                            OpenGL::Text3D(inf,-2500,200,16,1,1,menu_color[3],showmenu);
+
                                             const unsigned char ext[]="Wyjscie";
-                                            OpenGL::Text3D(ext,-2500,200,16,1,1,menu_color[3],showmenu);
+                                            OpenGL::Text3D(ext,-2500,400,16,1,1,menu_color[4],showmenu);
                                     }
                                 }
 
